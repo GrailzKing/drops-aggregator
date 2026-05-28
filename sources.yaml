@@ -1,0 +1,133 @@
+
+# drops-aggregator/config/sources.yaml
+# All feed URLs in one place. Add new sources here without touching collector code.
+
+sheet_id: "106og0wZRZcZOWmPGfuoUcCaYzz4bFyVszlWPrSqB1OU"
+
+music:
+  rss:
+    - name: Bandcamp New Releases
+      url: https://bandcamp.com/feed?context=new_releases
+    - name: Pitchfork Reviews
+      url: https://pitchfork.com/rss/reviews/albums/
+  shopify:
+    - name: Third Man Records
+      url: https://thirdmanrecords.com/collections/new-releases.atom
+  api:
+    - name: Spotify New Releases
+      url: https://api.spotify.com/v1/browse/new-releases
+      auth: spotify
+
+collectibles:
+  shopify_json:
+    - name: Funko
+      url: https://funko.com/collections/new-arrivals/products.json
+    - name: Shop Disney
+      url: https://www.shopdisney.com/collections/new-arrivals/products.json
+    - name: Stanley
+      url: https://www.stanley1913.com/collections/new/products.json
+    - name: Owala
+      url: https://owalalife.com/collections/new/products.json
+    - name: Swatch
+      url: https://www.swatch.com/en-us/new/products.json
+  scrape:
+    - name: Mattel Creations
+      url: https://creations.mattel.com/collections/new-arrivals
+    - name: US Mint
+      url: https://catalog.usmint.gov/new-products/
+    - name: Lego Shop
+      url: https://www.lego.com/en-us/categories/new-sets-and-products
+    - name: Obey Giant
+      url: https://store.obeygiant.com/collections/new-arrivals
+    - name: Bandi Collectibles
+      url: https://www.bandai.com/new-releases/
+    - name: Barbie Signature
+      url: https://barbie.mattel.com/en-us/about/barbie-signature.html
+
+sneakers:
+  api:
+    - name: Nike SNKRS
+      url: https://api.nike.com/launch/upcoming_products/3.0
+      params:
+        country: US
+        language: en
+        channelId: d9a5bc42-4b9c-4976-858a-f159cf99c647
+  shopify_json:
+    - name: Supreme
+      url: https://www.supremenewyork.com/shop.json
+    - name: Kith
+      url: https://kith.com/collections/new-arrivals/products.json
+  rss:
+    - name: SoleRetriever
+      url: https://www.soleretriever.com/feed
+    - name: Sneaker News
+      url: https://sneakernews.com/feed/
+    - name: Adidas Drops
+      url: https://www.adidas.com/us/new-arrivals#
+  scrape:
+    - name: BAPE
+      url: https://bape.com/collections/new-arrivals
+    - name: Vans
+      url: https://www.vans.com/en-us/new-arrivals/
+
+streetwear:
+  shopify_json:
+    - name: Supreme
+      url: https://www.supremenewyork.com/shop.json
+    - name: Kith
+      url: https://kith.com/collections/new-arrivals/products.json
+    - name: Crocs Collabs
+      url: https://www.crocs.com/c/collaborations/products.json
+  scrape:
+    - name: Nike Lifestyle
+      url: https://www.nike.com/w/lifestyle-shoes
+
+cards:
+  rss:
+    - name: Pokemon Center New
+      url: https://www.pokemoncenter.com/collections/new-arrivals.atom
+    - name: TCGPlayer New Sets
+      url: https://www.tcgplayer.com/rss/new-sets
+    - name: MTG Secret Lair
+      url: https://magic.wizards.com/en/products/secret-lair/rss
+  shopify_json:
+    - name: Card Kingdom
+      url: https://www.cardkingdom.com/catalog/new/products.json
+  scrape:
+    - name: Panini America
+      url: https://www.paniniamerica.net/new-releases/
+    - name: Upper Deck
+      url: https://www.upperdeckstore.com/new-products/
+    - name: Topps
+      url: https://www.topps.com/collections/new-arrivals
+    - name: One Piece Card
+      url: https://en.onepiece-cardgame.com/products/
+
+tickets:
+  api:
+    - name: Ticketmaster Discover
+      url: https://app.ticketmaster.com/discovery/v2/events.json
+      params:
+        classificationName: music,sports
+        sort: date,asc
+    - name: SeatGeek
+      url: https://api.seatgeek.com/2/events
+      params:
+        type: concert,sports
+    - name: AXS
+      url: https://www.axs.com/api/discover/events
+  rss:
+    - name: Songkick New Shows
+      url: https://www.songkick.com/feed/rss
+
+other:
+  rss:
+    - name: The Awesomer
+      url: https://theawesomer.com/feed/
+    - name: Uncrate
+      url: https://uncrate.com/feed/
+  scrape:
+    - name: McDonald's Limited
+      url: https://www.mcdonalds.com/us/en-us/promotions.html
+    - name: Target Exclusives
+      url: https://www.target.com/c/target-exclusive/-/N-4y6ef
